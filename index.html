@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer - Sanjana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="glass-header">
+    <h1>Sorting Visualizer</h1>
+    <p>Built by Sanjana • 6 Algorithms • Beautiful Glassmorphic UI</p>
+  </header>
+
+  <div class="glass-controls">
+    <div class="sliders">
+      <label>🧱 Bars: <span id="barCountValue">25</span></label>
+      <input type="range" id="barCount" min="10" max="100" value="25" />
+
+      <label>⚡ Speed: <span id="speedValue">50</span> ms</label>
+      <input type="range" id="speedRange" min="10" max="300" value="50" />
+    </div>
+
+    <div class="buttons">
+      <select id="algorithmSelect">
+        <option value="bubble">🔁 Bubble Sort</option>
+        <option value="insertion">📥 Insertion Sort</option>
+        <option value="selection">📌 Selection Sort</option>
+        <option value="merge">🔀 Merge Sort</option>
+        <option value="quick">⚡ Quick Sort</option>
+        <option value="heap">🌄 Heap Sort</option>
+      </select>
+
+      <button onclick="generateArray()">🔄 Generate Array</button>
+      <button onclick="startSorting()">🟢 Start Sorting</button>
+    </div>
+  </div>
+
+  <div class="bars-container" id="bars-container"></div>
+
+  <div class="stats-panel">
+    <div>🔁 Comparisons: <span id="comparisonCount">0</span></div>
+    <div>🔄 Swaps: <span id="swapCount">0</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
